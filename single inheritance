@@ -1,0 +1,36 @@
+package com.sample;
+class Person {
+    String name;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+// Derived class (inherits from Person)
+class Student extends Person {
+    Student(String name) {
+        super(name); // Call constructor of Person
+    }
+
+    void study() {
+        System.out.println(name + " is studying.");
+    }
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Student student = new Student("John Doe");
+
+	        student.display();  // Method from Person class
+	        student.study();    // Method from Student class
+
+	}
+
+}
