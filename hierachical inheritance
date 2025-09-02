@@ -1,0 +1,51 @@
+package com.sample;
+class Master {
+    String name;
+
+    Master(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+class Principal extends Master{
+	 Principal(String name) {
+        super(name);
+    }
+
+    void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+class Stud extends Master {
+    Stud(String name) {
+        super(name);
+    }
+
+    void study() {
+        System.out.println(name + " is studying.");
+    }
+}
+
+public class Hierarchicalnheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Principal principal = new Principal("Mrs. Smith");
+        Stud student = new Stud("John Doe");
+
+        principal.display();
+       principal.teach();
+
+        System.out.println();
+
+        student.display();
+        student.study();
+
+	}
+
+}
