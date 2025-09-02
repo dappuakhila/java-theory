@@ -1,0 +1,48 @@
+package com.sample;
+class Parent {
+    String name;
+
+    Parent(String name) {
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+// Derived class from Person
+class Teacher extends Parent {
+    Teacher(String name) {
+        super(name);
+    }
+
+    void teach() {
+        System.out.println(name + " is teaching.");
+    }
+}
+
+// Derived class from Teacher (Multilevel)
+class HeadTeacher extends Teacher {
+    HeadTeacher(String name) {
+        super(name);
+    }
+
+    void manage() {
+        System.out.println(name + " is managing the department.");
+    }
+}
+
+public class multileve_linheritence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 HeadTeacher ht = new HeadTeacher("Mrs. Thompson");
+
+	        ht.display();  // From Person
+	        ht.teach();    // From Teacher
+	        ht.manage();   // From HeadTeacher
+
+	}
+
+}
